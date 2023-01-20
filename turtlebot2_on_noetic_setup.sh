@@ -14,8 +14,6 @@ sudo apt install -y \
         ros-noetic-move-base \
         ros-noetic-kobuki-ftdi \
         ros-noetic-rgbd-launch \
-        ros-melodic-openni2-launch \ 
-        ros-melodic-depthimage-to-laserscan
         
 sudo apt install -y \
         python3-vcstool \
