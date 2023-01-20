@@ -1,0 +1,56 @@
+##############################################################################
+#
+# Source installation instructions at:
+#
+# http://www.ros.org/wiki/turtlebot/Tutorials/hydro/Source%20Installation
+#
+##############################################################################
+
+# Make sure to install these ROCON packages as well:
+# https://raw.github.com/robotics-in-concert/rocon/indigo/rocon_app_platform.rosinstall
+
+# Turtlebot stacks
+
+- git:
+    uri: https://github.com/turtlebot/turtlebot.git
+    local-name: turtlebot
+    version: melodic
+
+- git:
+    uri: https://github.com/turtlebot/turtlebot_msgs.git
+    local-name: turtlebot_msgs
+    version: indigo
+
+- git:
+    uri: https://github.com/turtlebot/turtlebot_simulator.git
+    local-name: turtlebot_simulator
+    version: melodic
+
+- git:
+    uri: https://github.com/turtlebot/turtlebot_apps.git
+    local-name: turtlebot_apps
+    version: indigo
+
+- git:
+    uri: https://github.com/turtlebot/turtlebot_interactions.git
+    local-name: turtlebot_interactions
+    version: indigo
+
+
+# Kobuki / Yujin stacks
+
+- git:
+    uri: https://github.com/yujinrobot/kobuki.git
+    local-name: kobuki
+    version: melodic
+
+- git:
+    uri: https://github.com/yujinrobot/yujin_ocs.git
+    local-name: yujin_ocs
+    version: devel
+
+# Other (fork version)
+- git:
+    uri: https://github.com/ros-drivers/linux_Peripheral_interfaces.git
+    local-name: linux_Peripheral_interfaces
+    version: kinetic
