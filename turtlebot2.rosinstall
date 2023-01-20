@@ -50,7 +50,21 @@
     version: devel
 
 # Other (fork version)
+# Battery monitor package
 - git:
     uri: https://github.com/ros-drivers/linux_Peripheral_interfaces.git
     local-name: linux_Peripheral_interfaces
     version: kinetic
+    
+# openni2_camera
+- git:
+    uri: https://github.com/ros-drivers/openni2_camera.git
+    local-name: openni2_camera
+    version: ros1
+    
+# depthimage_to_laserscan
+- git:
+    uri: https://github.com/ros-perception/depthimage_to_laserscan.git
+    local-name: depthimage_to_laserscan
+    version: melodic-devel
+    
