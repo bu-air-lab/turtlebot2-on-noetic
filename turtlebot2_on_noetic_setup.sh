@@ -38,6 +38,8 @@ rm -rf linux_Peripheral_interfaces
 # You need to MANUALLY, for now, apply the changes proposed in https://github.com/ros-drivers/linux_peripheral_interfaces/pull/18
 cd ../
 
+echo "The errors related to the python-orocos-kdl package can be ignored."
+echo "Refer to https://github.com/yujinrobot/kobuki/issues/427"
 rosdep install --from-paths . --ignore-src -r -y
 
 # Build the packages
