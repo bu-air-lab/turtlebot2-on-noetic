@@ -36,6 +36,7 @@ rm -rf yujin_ocs
 mv linux_Peripheral_interfaces/laptop_battery_monitor .
 rm -rf linux_Peripheral_interfaces
 # You need to MANUALLY, for now, apply the changes proposed in https://github.com/ros-drivers/linux_peripheral_interfaces/pull/18
+rm -rf turtlebot_create_desktop/create_gazebo_plugins
 cd ../
 
 echo "The errors related to the python-orocos-kdl package can be ignored."
