@@ -34,6 +34,8 @@ cd ./src
 mv yujin_ocs/yocs_cmd_vel_mux yujin_ocs/yocs_controllers yujin_ocs/yocs_velocity_smoother .
 rm -rf yujin_ocs
 mv linux_Peripheral_interfaces/laptop_battery_monitor .
+# Change python interpreter from 2 to 3.
+sed -i 's/env python/env python3/' ./laptop_battery_monitor/scripts/laptop_battery.py
 rm -rf linux_Peripheral_interfaces
 # You need to MANUALLY, for now, apply the changes proposed in https://github.com/ros-drivers/linux_peripheral_interfaces/pull/18
 rm -rf turtlebot_create_desktop/create_gazebo_plugins
