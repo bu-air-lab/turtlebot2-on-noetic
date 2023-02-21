@@ -56,11 +56,17 @@
     local-name: linux_Peripheral_interfaces
     version: kinetic
     
-# openni2_camera
+# # openni2_camera
+# - git:
+#     uri: https://github.com/ros-drivers/openni2_camera.git
+#     local-name: openni2_camera
+#     version: ros1
+
+# Astra camera
 - git:
-    uri: https://github.com/ros-drivers/openni2_camera.git
-    local-name: openni2_camera
-    version: ros1
+    uri: https://github.com/orbbec/ros_astra_camera.git
+    local-name: astra_camera
+    version: main
     
 # depthimage_to_laserscan
 - git:
