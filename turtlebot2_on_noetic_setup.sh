@@ -27,7 +27,7 @@ sudo apt install -y \
 
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws
-vcs import ./src < ~/turtlebot.rosinstall
+vcs import ./src < ~/turtlebot2-on-noetic/turtlebot.rosinstall
 
 # Remove unnecessary and incompatible packages
 cd ./src
