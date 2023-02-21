@@ -13,8 +13,15 @@ sudo apt install -y \
         ros-noetic-base-local-planner \
         ros-noetic-move-base \
         ros-noetic-kobuki-ftdi \
-        ros-noetic-rgbd-launch \ 
-        ros-noetic-libuvc-*
+        ros-noetic-rgbd-launch \
+        libgflags-dev \
+        ros-noetic-image-geometry \
+        ros-noetic-camera-info-manager \
+        ros-noetic-image-transport \
+        ros-noetic-image-publisher \
+        libgoogle-glog-dev \
+        libusb-1.0-0-dev \
+        libeigen3-dev
         
 sudo apt install -y \
         python3-vcstool \
@@ -25,6 +32,15 @@ sudo apt install -y \
         python3-future \
         liborocos-kdl-dev \
         pyqt5-dev-tools
+        
+# Install libuvc for astra camera
+cd ~/
+git clone https://github.com/libuvc/libuvc.git
+cd libuvc
+mkdir build && cd build
+cmake .. && make -j4
+sudo make install
+sudo ldconfig
 
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws
@@ -45,8 +61,9 @@ rm -rf turtlebot_create_desktop/create_gazebo_plugins
 cd ../
 
 # Astro camera setup
-roscd astra_camera
+cd astra_camera
 ./scripts/create_udev_rules
+sudo udevadm control --reload && sudo  udevadm trigger
 
 cd ~/catkin_ws
 
