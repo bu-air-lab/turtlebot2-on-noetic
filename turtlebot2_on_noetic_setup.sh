@@ -24,6 +24,7 @@ sudo apt install -y \
         libeigen3-dev
         
 sudo apt install -y \
+        python-is-python3 \
         python3-vcstool \
         python3-pip \
         libusb-dev \
@@ -52,7 +53,6 @@ mv yujin_ocs/yocs_cmd_vel_mux yujin_ocs/yocs_controllers yujin_ocs/yocs_velocity
 rm -rf yujin_ocs
 
 mv linux_Peripheral_interfaces/laptop_battery_monitor .
-sed -i 's/env python/env python3/' ./laptop_battery_monitor/scripts/laptop_battery.py  # Change python interpreter from 2 to 3.
 echo 'export TURTLEBOT_BATTERY=/sys/class/power_supply/BAT1' >> ~/.bashrc  # Set environment variable TURTLEBOT_BATTERY correctly.
 rm -rf linux_Peripheral_interfaces
 
