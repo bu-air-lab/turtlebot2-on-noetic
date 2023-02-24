@@ -53,7 +53,6 @@ mv yujin_ocs/yocs_cmd_vel_mux yujin_ocs/yocs_controllers yujin_ocs/yocs_velocity
 rm -rf yujin_ocs
 
 mv linux_Peripheral_interfaces/laptop_battery_monitor .
-echo 'export TURTLEBOT_BATTERY=/sys/class/power_supply/BAT1' >> ~/.bashrc  # Set environment variable TURTLEBOT_BATTERY correctly.
 rm -rf linux_Peripheral_interfaces
 
 # You need to MANUALLY, for now, apply the changes proposed in https://github.com/ros-drivers/linux_peripheral_interfaces/pull/18
@@ -66,6 +65,10 @@ cd astra_camera
 sudo udevadm control --reload && sudo  udevadm trigger
 
 cd ~/catkin_ws
+
+echo 'export TURTLEBOT_BATTERY=/sys/class/power_supply/BAT1' >> ~/.bashrc  # Set environment variable TURTLEBOT_BATTERY correctly.
+echo 'export TURTLEBOT_3D_SENSOR=astra' >> ~/.bashrc  # Set environment variable TURTLEBOT_BATTERY correctly.
+
 
 rosdep install --from-paths . --ignore-src -r -y
 echo "The errors related to the python-orocos-kdl package can be ignored."
