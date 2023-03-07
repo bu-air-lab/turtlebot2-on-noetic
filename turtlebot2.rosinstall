@@ -27,7 +27,7 @@
     version: melodic
 
 - git:
-    uri: git@github.com:YoheiHayamizu/turtlebot2_apps.git
+    uri: git@github.com:bu-air-lab/turtlebot2_apps.git
     local-name: turtlebot_apps
     version: noetic
 
