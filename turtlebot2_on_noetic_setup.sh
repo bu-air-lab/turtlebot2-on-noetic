@@ -64,7 +64,7 @@ rm -rf turtlebot_create_desktop/create_gazebo_plugins
 cd ../
 
 # Astro camera setup
-cd astra_camera
+cd ~/catkin_ws/src/astra_camera
 ./scripts/create_udev_rules
 sudo udevadm control --reload && sudo  udevadm trigger
 
