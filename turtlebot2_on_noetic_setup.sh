@@ -45,7 +45,10 @@ sudo ldconfig
 
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws
-vcs import ./src < ~/turtlebot2-on-noetic/turtlebot2.rosinstall
+cp /home/turtlebot/turtlebot2-on-noetic/turtlebot2.rosinstall .
+vcs import ./src < ./turtlebot2.rosinstall
+
+echo 'source /opt/ros/noetic/setup.bash' >> ~/.bashrc  # create a path
 
 # Remove unnecessary and incompatible packages
 cd ./src
@@ -71,8 +74,8 @@ echo 'export TURTLEBOT_3D_SENSOR=astra' >> ~/.bashrc  # Set environment variable
 
 
 rosdep install --from-paths . --ignore-src -r -y
-echo "The errors related to the python-orocos-kdl package can be ignored."
-echo "Refer to https://github.com/yujinrobot/kobuki/issues/427"
+echo The errors related to the python-orocos-kdl package can be ignored.
+echo Refer to https://github.com/yujinrobot/kobuki/issues/427
 
 # Build the packages
 catkin_make
