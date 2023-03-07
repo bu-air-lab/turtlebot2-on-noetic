@@ -45,6 +45,7 @@ sudo make install
 sudo ldconfig
 
 echo 'source /opt/ros/noetic/setup.bash' >> ~/.bashrc 
+source ~/.bashrc
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws
 cp /home/turtlebot/turtlebot2-on-noetic/turtlebot2.rosinstall .
