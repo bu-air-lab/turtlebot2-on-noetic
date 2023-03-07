@@ -12,7 +12,7 @@
 # Turtlebot stacks
 
 - git:
-    uri: git@github.com:bu-air-lab/turtlebot2.git
+    uri: https://github.com/bu-air-lab/turtlebot2.git
     local-name: turtlebot
     version: noetic
 
@@ -27,7 +27,7 @@
     version: melodic
 
 - git:
-    uri: git@github.com:bu-air-lab/turtlebot2_apps.git
+    uri: https://github.com/bu-air-lab/turtlebot2_apps.git
     local-name: turtlebot_apps
     version: noetic
 
