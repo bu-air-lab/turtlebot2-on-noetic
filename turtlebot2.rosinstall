@@ -12,9 +12,9 @@
 # Turtlebot stacks
 
 - git:
-    uri: https://github.com/turtlebot/turtlebot.git
+    uri: git@github.com:bu-air-lab/turtlebot2.git
     local-name: turtlebot
-    version: melodic
+    version: noetic
 
 - git:
     uri: https://github.com/turtlebot/turtlebot_msgs.git
@@ -27,9 +27,9 @@
     version: melodic
 
 - git:
-    uri: https://github.com/turtlebot/turtlebot_apps.git
+    uri: git@github.com:YoheiHayamizu/turtlebot2_apps.git
     local-name: turtlebot_apps
-    version: indigo
+    version: noetic
 
 - git:
     uri: https://github.com/turtlebot/turtlebot_interactions.git
