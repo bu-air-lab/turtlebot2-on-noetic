@@ -44,14 +44,13 @@ cmake .. && make -j4
 sudo make install
 sudo ldconfig
 
-echo 'source /opt/ros/noetic/setup.bash' >> ~/.bashrc 
+echo 'source /opt/ros/noetic/setup.bash' >> ~/.bashrc  # create a path
 source ~/.bashrc
+
 mkdir -p ~/catkin_ws/src
 cd ~/catkin_ws
 cp /home/turtlebot/turtlebot2-on-noetic/turtlebot2.rosinstall .
 vcs import ./src < ./turtlebot2.rosinstall
-
-echo 'source /opt/ros/noetic/setup.bash' >> ~/.bashrc  # create a path
 
 # Remove unnecessary and incompatible packages
 cd ./src
@@ -65,11 +64,6 @@ rm -rf linux_Peripheral_interfaces
 rm -rf turtlebot_create_desktop/create_gazebo_plugins
 cd ../
 
-# Astro camera setup
-cd ~/catkin_ws/src/astra_camera
-./scripts/create_udev_rules
-sudo udevadm control --reload && sudo  udevadm trigger
-
 cd ~/catkin_ws
 
 echo 'export TURTLEBOT_BATTERY=/sys/class/power_supply/BAT1' >> ~/.bashrc  # Set environment variable TURTLEBOT_BATTERY correctly.
@@ -82,3 +76,9 @@ echo Refer to https://github.com/yujinrobot/kobuki/issues/427
 
 # Build the packages
 catkin_make
+
+source ~/catkin_ws/devel/setup.bash
+# Astro camera setup
+cd ~/catkin_ws/src/astra_camera
+./scripts/create_udev_rules
+sudo udevadm control --reload && sudo  udevadm trigger
